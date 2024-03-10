@@ -46,6 +46,8 @@
  
   }
 
+ 
+
 
 /* general classes end here  */
 
@@ -84,6 +86,13 @@
   }
 
 
-
- 
+  .slick-track {
   
+    padding-bottom:50px;
+      height:100%;
+    }
+ 
+    .slick-track div:first-child {
+
+        height:100%;
+        }
