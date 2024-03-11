@@ -605,55 +605,9 @@ $('.slider2').slick({
 
 <!--results section ends here !-->
 
-<?php
-
-$errors= [];//starting validaton by creating array
 
 
-if(empty($_POST['fname'])){
-  $errors['fnameError']=  'please enter category name';   //if firstname element of form is empty the array index is set to
-}
-if(empty($_POST['lname'])){
-  $errors['lnameError']=  'please youre last name category ';   //if firstname element of form is empty the array index is set to
-}
-if(empty($_POST['Phone'])){
-  $errors['phoneNumberError']=  'please enter phone number';   //if firstname element of form is empty the array index is set to
-}
 
-if(empty($_POST['Email'])){
-  $errors['emailError']=  'please enter category name';   //if firstname element of form is empty the array index is set to
-}
-
-if(empty($_POST['Height'])){
-  $errors['HeightError']=  'please enter phone number';   //if firstname element of form is empty the array index is set to
-}
-
-if(empty($_POST['Weight'])){
-  $errors['WeightError']=  'please enter phone number';   //if firstname element of form is empty the array index is set to
-}
-
-if(empty($_POST['Email'])){
-  $errors['emailError']=  'please enter category name';   //if firstname element of form is empty the array index is set to
-}
-
-if (isset($_POST['desc'])) {
-if (trim($_POST['desc'])==''){ 
-  $errors['descError']=  'please enter a desc of youre enquiry';   //if firstname element of form is empty the array index is set to
-}
-}
-
-
-if (empty($_POST['desc'])){ 
-  $errors['descError']=  'please enter a desc of youre enquiry fdffddfdf ';   //if firstname element of form is empty the array index is set to
-}
-
-if (empty($_POST['gender'])) {
-
-  $errors['containerSize']=  'please select a gender  ';   //if firstname element of form is empty the array index is set to
-
-}
-
-?>
 
 <!-- contact form section starts here !-->
 <div class="d-flex w-100 d-flex flex-column align-items-center py-md-5" style="border-bottom: 4px solid darkorange; border-top: 4px solid darkorange;  background-color: rgb(30, 30, 30);" >  
@@ -695,15 +649,7 @@ if (empty($_POST['gender'])) {
       <label for="gender">Prefer not to say</label>
 
   </div>
-  <?php 
 
-
-if (empty($_POST['gender'])) {
-
-  echo "<p> Please select you're gender else form wont submit </p>";
- }
- 
- ?>
 </div>
 
 <div class=" d-flex flex-column flex-md-row justify-content-start gap-3 gap-md-5 mt-3 mt-md-3" >
@@ -713,36 +659,12 @@ if (empty($_POST['gender'])) {
     <label class="text-start" for="fname">First name:</label>
     <input class="text-white px-2 border border-1 " style="height:60px; background-color: rgb(30, 30, 30);" 
     type="text" id="fname" name="fname" value= <?php if (isset($_POST['fname'])) { if (!empty($_POST['fname'])) { echo $_POST['fname']; } } ?> >
-    <?php if (isset($_POST['fname'])) {
-
-if (empty($_POST['fname'])) {
-
- echo "
- 
-
- <p> Please enter your'e first name </p>
- 
- ";
-}
-
-} ?>
+  
     </div>
     <div class=" d-flex flex-column justify-content-center flex-grow-1" style="flex:1;">
     <label class="text-start" for="lname">Last name:</label>
     <input class="text-white px-2 border border-1 " style="height:60px; background-color: rgb(30, 30, 30);" type="text" id="lname" name="lname" value=<?php if (isset($_POST['lname'])) { if (!empty($_POST['lname'])) { echo $_POST['lname']; } } ?> >
-    <?php if (isset($_POST['lname'])) {
 
-if (empty($_POST['lname'])) {
-
- echo "
- 
-
- <p> Please enter your'e last name </p>
- 
- ";
-}
-
-} ?>
 </div>
 
 </div>
@@ -753,36 +675,12 @@ if (empty($_POST['lname'])) {
 
     <label class="text-start" for="Phone">Phone:</label>
     <input class="text-white px-2 border border-1 " style="height:60px; background-color: rgb(30, 30, 30);" type="text" id="Phone" name="Phone" value=<?php if (isset($_POST['Phone'])) { if (!empty($_POST['Phone'])) { echo $_POST['Phone']; } } ?>>
-    <?php if (isset($_POST['Phone'])) {
-
-if (empty($_POST['Phone'])) {
-
- echo "
- 
-
- <p> Please enter Phone </p>
- 
- ";
-}
-
-} ?>
+   
     </div>
     <div class=" d-flex flex-column justify-content-center flex-grow-1" style="flex:1;">
     <label class="text-start" for="Email">Email:</label>
     <input class="text-white px-2 border border-1 " style="height:60px; background-color: rgb(30, 30, 30);" type="text" id="Email" name="Email" value=<?php if (isset($_POST['Email'])) { if (!empty($_POST['Email'])) { echo $_POST['Email']; } } ?>>
-    <?php if (isset($_POST['Email'])) {
-
-if (empty($_POST['Email'])) {
-
- echo "
- 
-
- <p> Please enter your'e Email </p>
- 
- ";
-}
-
-} ?>
+   
 </div>
 
 </div>
@@ -794,37 +692,13 @@ if (empty($_POST['Email'])) {
 
     <label class="text-start" for="Weight">Weight:</label>
     <input class=" text-white px-2 border border-1 " style="height:60px; background-color: rgb(30, 30, 30);" type="text" id="Weight" name="Weight" value=<?php if (isset($_POST['Weight'])) { if (!empty($_POST['Weight'])) { echo $_POST['Weight']; } } ?>>
-    <?php if (isset($_POST['Weight'])) {
-
-if (empty($_POST['Weight'])) {
-
- echo "
- 
-
- <p> Please enter weight </p>
- 
- ";
-}
-
-} ?>
+   
     </div>
     <div class=" d-flex flex-column justify-content-center flex-grow-1" style="flex:1;">
     <label class="text-start" for="Height">Height:</label>
     <input class="text-white px-2 border border-1" style="height:60px; background-color: rgb(30, 30, 30);" type="text" id="Height" name="Height" value=<?php if (isset($_POST['Weight'])) { if (!empty($_POST['Height'])) { echo $_POST['Height']; } } ?>>
 
-    <?php if (isset($_POST['Height'])) {
-
-if (empty($_POST['Height'])) {
-
- echo "
- 
-
- <p> Please enter height  </p>
- 
- ";
-}
-
-} ?>
+   
 
 </div>
 
@@ -839,8 +713,7 @@ if (empty($_POST['Height'])) {
 
 
     <textarea class=" text-white px-2 border border-1" style=" height:200px; background-color: rgb(30, 30, 30);" type="text" id="desc" name="desc" value="">
-    <?php
-    ?>
+    
   </textarea>
 
 
