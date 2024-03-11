@@ -738,29 +738,7 @@ $('.slider2').slick({
 
 <!-- contact form section ends here !-->
 <footer class="py-3 bg-black " style=" color:darkorange;"> 
-  Production by Harry Mosdell <?php
-  var_dump($errors);
- if (isset($_POST['submit1'])) {
-  if(count($errors)==0){
-  $FirstName=htmlspecialchars($_POST['fname']);
-  $LastName=htmlspecialchars($_POST['lname']);
-  $phoneNumber=htmlspecialchars($_POST['Phone']);
-  $phoneNumber=htmlspecialchars($_POST['Email']);
-  $Height=htmlspecialchars($_POST['Height']);
-  $Weight=htmlspecialchars($_POST['Weight']);
-  $enquiry=htmlspecialchars($_POST['desc']);
-
-	  require 'PHPMailer/test.html.php'; 
-	 
-  }
-
-} 
-   else {
-
-    echo 'form his not been submitted please fill all elements';
-
-   }
-?> 
+  Production by Harry Mosdell  
 <a class="d-block" href="https://www.flaticon.com/free-animated-icons/workout" title="workout animated icons">Workout animated icons created by Freepik - Flaticon</a>
 
 
